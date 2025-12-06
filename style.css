@@ -39,6 +39,55 @@
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
+
+  /* ============================================
+     COLOR SYSTEM
+     Warm, appetizing colors for a food story
+     ============================================ */
+
+  /* Neutrals */
+  --color-white: hsl(0, 0%, 100%);
+  --color-off-white: hsl(0, 0%, 98%);
+  --color-light-gray: hsl(0, 0%, 96%);
+  --color-medium-gray: hsl(0, 0%, 88%);
+  --color-dark-gray: hsl(0, 0%, 35%);
+  --color-near-black: hsl(200, 19%, 18%);
+
+  /* Page colors */
+  --color-background: hsl(30, 25%, 85%);
+  --color-border: hsl(30, 30%, 50%);
+
+  /* ============================================
+     TYPOGRAPHY SYSTEM
+     ============================================ */
+
+  /* Font families */
+  --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font sizes - modular scale */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-md: 1.125rem;
+  /* 18px */
+  --font-size-lg: 1.5rem;
+  /* 24px */
+  --font-size-xl: 2rem;
+  /* 32px */
+  --font-size-2xl: 2.5rem;
+  /* 40px */
+
+  /* Font weights (Montserrat variable supports 100-900) */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
 }
 
 /* ============================================
@@ -57,14 +106,23 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: hsl(30, 25%, 85%);
-  border: 30px solid hsl(30, 30%, 50%);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-near-black);
+  background-color: var(--color-background);
+  border: 30px solid var(--color-border);
 }
 
 header {
   padding: var(--space-lg) var(--container-padding);
   text-align: center;
+}
+
+header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
 }
 
 footer {
@@ -120,8 +178,10 @@ footer {
 
 /* Panel headings */
 .panel h2 {
-  /* Spacing only - you'll add typography styles */
   margin-bottom: var(--space-xs);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
 }
 
 /* ============================================
@@ -156,8 +216,10 @@ footer {
    Brief image description (1-2 sentences)
    ============================================ */
 .panel figcaption {
-  /* Basic spacing - you'll add typography */
   margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  color: var(--color-dark-gray);
 }
 
 /* ============================================
@@ -165,8 +227,9 @@ footer {
    Narrative story text (2-4 sentences)
    ============================================ */
 .panel p {
-  /* Basic spacing - you'll add typography */
   margin-top: var(--space-xs);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
 }
 
 /* ============================================
